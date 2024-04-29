@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "gobilevel2.sln"
+    "dotnet.defaultSolution": "gitunitylfs.sln"
 }
