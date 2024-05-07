@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MaggiePoint.unity
     guid: 72c4b4fe97d55794693f6fa6d0c5c377
+  - enabled: 1
+    path: Assets/Scenes/bomb.unity
+    guid: 63cf4bc5d4e398f4a9b16036be953fd0
   m_configObjects: {}
