@@ -91,3 +91,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneToLoad: Basement
+  playerPosition: {x: 0.068, y: 0.881}
+  playerStorage: {fileID: 11400000, guid: 692b98e156135b9488bfe5b72c391fc6, type: 2}

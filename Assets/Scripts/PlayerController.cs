@@ -10,8 +10,7 @@ public class PlayerController : MonoBehaviour
 
      public float moveSpeed =1f;
 
-
-    public ContactFilter2D movementFilter;
+     public ContactFilter2D movementFilter;
 
     Vector2 movementInput;
 
@@ -25,6 +24,7 @@ public class PlayerController : MonoBehaviour
 
     List<RaycastHit2D> castCollision=new List<RaycastHit2D>();
     bool canMove=true;
+    public VectorValue startingPosition;
 
 
      void Start()
@@ -32,6 +32,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator=GetComponent<Animator>();
         spriteRenderer=GetComponent<SpriteRenderer>();
+        transform.position= startingPosition.initialValue;
     }
 
     void OnMove(InputValue movementValue)

@@ -90,4 +90,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f278c7c06e482a144964ee82048007d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: GameOver
+  sceneToLoad: MaggiePoint
+  playerPosition: {x: -2.8, y: -1.599}
+  playerStorage: {fileID: 11400000, guid: 692b98e156135b9488bfe5b72c391fc6, type: 2}

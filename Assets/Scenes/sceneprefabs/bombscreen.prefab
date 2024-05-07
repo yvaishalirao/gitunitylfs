@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7226435461105328751}
   - component: {fileID: 6407628887441401168}
-  - component: {fileID: 520557118628577826}
+  - component: {fileID: 5307607558333155338}
   m_Layer: 0
   m_Name: bombscreen
   m_TagString: Untagged
@@ -65,7 +65,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.012008667, y: 0.0068621635}
+  m_Offset: {x: 0.0004992485, y: -0.0010752678}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -76,9 +76,9 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.13192558, y: 0.073596954}
+  m_Size: {x: 0.22003078, y: 0.08947182}
   m_EdgeRadius: 0
---- !u!114 &520557118628577826
+--- !u!114 &5307607558333155338
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -87,7 +87,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5847460380292195112}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f278c7c06e482a144964ee82048007d2, type: 3}
+  m_Script: {fileID: 11500000, guid: ecc7be254be6cf14eb12f4a9694ef826, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sceneToLoad: GameOver
