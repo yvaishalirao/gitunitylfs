@@ -41,7 +41,10 @@ public class button : MonoBehaviour
             timtext.SetActive(false);
             defutext.SetActive(true);
         }
-    
+        if(Remaining<0 && ((led[0].GetComponent<SpriteRenderer>().color == Color.red) || (led[1].GetComponent<SpriteRenderer>().color == Color.red) ||(led[2].GetComponent<SpriteRenderer>().color == Color.red) ||(led[3].GetComponent<SpriteRenderer>().color == Color.red)))
+        {
+            expl();
+        }
     }
     void OnMouseDown()
     {  
@@ -55,13 +58,18 @@ public class button : MonoBehaviour
         led[3].GetComponent<SpriteRenderer>().color = Color.green;
         else 
         {
+        expl();
+
+    }
+    
+    }
+    void expl()
+    {
         bmb.GetComponent<SpriteRenderer>().sprite=null;
         timtext.SetActive(false);
         gotext.SetActive(true);
         scr.SetActive(true);
         vp.Play();
         }
-
-    }
 }
 
