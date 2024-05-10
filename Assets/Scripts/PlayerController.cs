@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
      public float moveSpeed =1f;
      [SerializeField] GameObject bmbscr;
 
+    public SwordAttack swordAttack;
+
      public ContactFilter2D movementFilter;
 
     Vector2 movementInput;
@@ -42,27 +44,37 @@ public class PlayerController : MonoBehaviour
     }
 
     private void FixedUpdate()
-    {
+
+    {if(canMove){
+ 
             if((movementInput != Vector2.zero)&& (!bmbscr.activeSelf)) {
             bool success=TryMove(movementInput);
             if(!success )
             {
                 success=TryMove(new Vector2(movementInput.x,0));
-            
+            }
             if(!success)
                 {
                     success=TryMove(new Vector2(0,movementInput.y));
-                }}
-        
-        animator.SetBool("isMoving",success);
-        }else{animator.SetBool("isMoving",false);}
+                }
 
+            
+
+              animator.SetBool("isMoving",success);
+        
+        }
+        else{
+            animator.SetBool("isMoving",false);
+        }
+        //setting direction of sprite 
         if(movementInput.x < 0){
             spriteRenderer.flipX=true;
         }
         else if(movementInput.x > 0){
            spriteRenderer.flipX=false; 
         }}
+
+    }
  
     
 
@@ -83,6 +95,37 @@ public class PlayerController : MonoBehaviour
             else{return false;}
         
        
+    }
+
+     void OnFire(){
+        animator.SetTrigger("swordAttack");
+    }
+
+    public void SwordAttack(){
+        LockMovement();
+        if(spriteRenderer.flipX==true){
+            swordAttack.AttackLeft();
+        }
+        else{
+            swordAttack.AttackRight();
+
+        }
+
+        
+    }
+
+    public void EndSwordAttack(){
+        UnlockMovement();
+        swordAttack.StopAttack();
+    }
+
+
+    public void LockMovement(){
+        canMove=false;
+    }
+
+    public void UnlockMovement(){
+        canMove=true; 
     }
     
 }
