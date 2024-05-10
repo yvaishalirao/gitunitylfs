@@ -1,16 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-
+using UnityEngine;
+using TMPro;
+using UnityEngine.Video;
+using Unity.VisualScripting;
 public class Landmine : MonoBehaviour
 {
-    public string sceneToLoad;
-
+[SerializeField] GameObject canv;
+    public VideoPlayer vp;
     public void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Player")&& !other.isTrigger) {
-            SceneManager.LoadScene(sceneToLoad);
+        StartCoroutine(waitt());
+        canv.SetActive(true);
         }
-    
+    IEnumerator waitt()
+    {
+        yield return new WaitForSeconds(1);
+    }
     }
 }
