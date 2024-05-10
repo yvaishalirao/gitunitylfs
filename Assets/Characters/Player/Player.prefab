@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3368567085527957240}
   m_Layer: 0
   m_Name: SwordHitbox
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -240,6 +240,7 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
+  bmbscr: {fileID: 0}
   collisionOffset: 0.02
   startingPosition: {fileID: 11400000, guid: 692b98e156135b9488bfe5b72c391fc6, type: 2}
 --- !u!50 &7184472825824118399
