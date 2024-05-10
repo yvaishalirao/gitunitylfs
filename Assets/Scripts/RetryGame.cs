@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class RetryGame : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public string sceneToLoad;
     void Start()
     {
         
@@ -14,9 +14,8 @@ public class RetryGame : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-    }
-    public void LoadGame(){
-        SceneManager.LoadScene("SampleScene");
+        if (Input.GetMouseButtonDown(0))
+        {          SceneManager.LoadScene(sceneToLoad);    }
+
     }
 }

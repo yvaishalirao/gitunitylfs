@@ -5,11 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class Landmine : MonoBehaviour
 {
-    public string sceneToLoad;
-
+[SerializeField] GameObject canv;
     public void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Player")&& !other.isTrigger) {
-            SceneManager.LoadScene(sceneToLoad);
+            canv.SetActive(true);
         }
     
     }

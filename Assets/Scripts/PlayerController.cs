@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     public SwordAttack swordAttack;
 
      public ContactFilter2D movementFilter;
+     [SerializeField] GameObject bmbscr;
 
     Vector2 movementInput;
 
@@ -44,7 +45,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {if(canMove){
-            if(movementInput != Vector2.zero) {
+            if((movementInput != Vector2.zero)&& !bmbscr.activeSelf) {
             bool success=TryMove(movementInput);
             if(!success )
             {
