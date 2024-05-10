@@ -6,6 +6,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.Video;
 using Unity.VisualScripting;
+using UnityEngine.SceneManagement;
 
 public class button : MonoBehaviour
 {
@@ -15,11 +16,10 @@ public class button : MonoBehaviour
     [SerializeField] GameObject defutext;
     [SerializeField] GameObject bmb;
     [SerializeField] GameObject timtext;
-    [SerializeField] GameObject gotext;
-
-    [SerializeField] GameObject scr;
-    public VideoPlayer vp;
-
+    [SerializeField] Scene GO;
+    [SerializeField] GameObject canv;
+   
+    private SceneSwitcher sceneSwitcher;
 
     private float Remaining;
     // Start is called before the first frame update
@@ -29,7 +29,6 @@ public class button : MonoBehaviour
         led[1].GetComponent<SpriteRenderer>().color = Color.red;
         led[2].GetComponent<SpriteRenderer>().color = Color.red;
         led[3].GetComponent<SpriteRenderer>().color = Color.red;
-
     }
 
     // Update is called once per frame
@@ -45,9 +44,8 @@ public class button : MonoBehaviour
         {
             expl();
         }
-    }
-    void OnMouseDown()
-    {  
+        if (Input.GetMouseButtonDown(0))
+        {  
         if(Remaining%10==7)
         led[0].GetComponent<SpriteRenderer>().color = Color.green;
         else if(Remaining%10==5)
@@ -63,13 +61,10 @@ public class button : MonoBehaviour
     }
     
     }
-    void expl()
-    {
-        bmb.GetComponent<SpriteRenderer>().sprite=null;
-        timtext.SetActive(false);
-        gotext.SetActive(true);
-        scr.SetActive(true);
-        vp.Play();
+    }    
+    public void expl()
+    {   canv.SetActive(true);
         }
 }
+
 
