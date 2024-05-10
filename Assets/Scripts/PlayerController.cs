@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
 
      public float moveSpeed =1f;
+     [SerializeField] GameObject bmbscr;
 
     public SwordAttack swordAttack;
 
@@ -43,8 +44,10 @@ public class PlayerController : MonoBehaviour
     }
 
     private void FixedUpdate()
+
     {if(canMove){
-            if(movementInput != Vector2.zero) {
+ 
+            if((movementInput != Vector2.zero)&& (!bmbscr.activeSelf)) {
             bool success=TryMove(movementInput);
             if(!success )
             {
