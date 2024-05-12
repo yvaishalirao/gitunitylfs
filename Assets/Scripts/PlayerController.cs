@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
      public float moveSpeed =1f;
 
     public SwordAttack swordAttack;
+    //public AudioSource steps;
 
      public ContactFilter2D movementFilter;
      [SerializeField] GameObject bmbscr;
@@ -59,10 +60,13 @@ public class PlayerController : MonoBehaviour
             
 
               animator.SetBool("isMoving",success);
+             
+
         
         }
         else{
             animator.SetBool("isMoving",false);
+ 
         }
         //setting direction of sprite 
         if(movementInput.x < 0){

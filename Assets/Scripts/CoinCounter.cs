@@ -17,13 +17,16 @@ public class CoinCounter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        coinText.text="COINS: "+currentCoins.ToString();
+        coinText.text="COCOS: "+currentCoins.ToString();
     }
 
     // Update is called once per frame
     public void IncreaseCoin(int v){
         currentCoins+=v;
-        coinText.text="COINS: " +currentCoins.ToString();
+        coinText.text="COCOS: " +currentCoins.ToString();
+    }
+    public int cc{
+        get{return currentCoins;}
     }
     }
 
